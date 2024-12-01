@@ -93,7 +93,7 @@ const QuestionFourAnswer = () => {
     return isReady;
   }
 
-  if (end != undefined) {
+  if (end != undefined && end != "") {
     if (points1 > points2) {
       return (
         <div className={styles.wrapper}>
