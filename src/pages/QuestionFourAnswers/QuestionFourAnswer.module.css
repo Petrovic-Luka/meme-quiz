@@ -1,0 +1,40 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333A64;
+    height: 100vh;  
+}
+.takmicar{
+    display: flex;
+    gap: 15px;
+    color: #FFFFFF;
+    align-items: center;
+}
+.takmicari{
+    padding-top: 10px;
+    gap: 70vw;
+    display: flex;
+}
+.takmicar img{
+    height: 50px;
+}
+.question{
+    background-color: #7680BC8F;
+    color: #FFFFFF;
+    margin-top: 40px;
+    border-radius: 8px;
+    height: 200px;
+    width: 90vw;
+}
+.twoAns{
+    display: flex;
+    gap: 25vw;
+    margin-top: 40px;
+}
+.answer{
+    height: 10px;
+    width: 30vw;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
