@@ -2,6 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect, React } from "react";
 import { fetchData } from "./functions";
+import  MainPage from './pages/main_page/main_page'
+import WaitingPage from "./pages/WaitingPage/WaitingPage";
+import WaitingPageSaPotvrdi from "./pages/WaitingPage/WaitingPageSaPotvrdi"
+import QuestionFourAnswer from "./pages/QuestionFourAnswers/QuestionFourAnswer";
+import QuestionInputAnswer from "./pages/QuestionInputAnswer/QuestionInputAnswer";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -61,7 +66,7 @@ function App() {
 
   return (
     <div className="App">
-      <input
+      {/* <input
         type="text"
         onChange={(e) => {
           setUsername(e.target.value);
@@ -74,8 +79,10 @@ function App() {
         onClick={(e) => {
           wrapper();
         }}
-      ></input>
+      ></input> */}
+      <MainPage/>
     </div>
+    
   );
 }
 

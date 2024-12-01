@@ -1,0 +1,52 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333A64;
+    height: 100vh;  
+}
+.toptwo{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    gap: 10px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7680BC8F;
+    color: #FFFCFC;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    height: 40px;
+    width: 300px;
+}
+.kod{
+    background-color: #FFFFFF;
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 20px;
+    height: 40px;
+    width: 300px;
+}
+.cekanje{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFB52CF0;
+    color: #FFFFFF;
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 20px;
+    height: 50px;
+    width: 300px;
+}
+.cekanje:hover{
+    transform: scale(1.01);
+}
+.loader{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
