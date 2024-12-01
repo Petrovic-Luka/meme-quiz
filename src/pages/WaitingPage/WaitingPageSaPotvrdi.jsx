@@ -7,6 +7,7 @@ const WaitingPage = () => {
 
   async function sendJoin() {
     try {
+      localStorage.setItem("id", sessionId);
       var temp = {
         Id: sessionId,
         username: localStorage.getItem("username"),
