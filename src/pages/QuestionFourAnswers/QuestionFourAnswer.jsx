@@ -12,6 +12,8 @@ const QuestionFourAnswer = () => {
   const [player2, setPlayer2] = useState("");
   const [points1, setPoints1] = useState("");
   const [points2, setPoints2] = useState("");
+  const [end, setEnd] = useState("");
+
   useEffect(() => {
     const fetchData2 = async () => {
       try {
@@ -37,6 +39,9 @@ const QuestionFourAnswer = () => {
     setPlayer2(postsData.player2);
     setPoints1(postsData.pointsP1);
     setPoints2(postsData.pointsP2);
+    if (postsData.end != undefined) {
+      setEnd(postsData.end);
+    }
   }
 
   async function sendCreate(answer) {
@@ -88,6 +93,57 @@ const QuestionFourAnswer = () => {
     return isReady;
   }
 
+  if (end != undefined) {
+    if (points1 > points2) {
+      return (
+        <div className={styles.wrapper}>
+          <div className={styles.takmicari}>
+            <div className={styles.takmicar}>
+              <img src={crveni}></img>
+              <p>{player1 + ":" + points1}</p>
+            </div>
+            <div className={styles.takmicar}>
+              <p>{player2 + ":" + points2}</p>
+              <img src={zeleni}></img>
+            </div>
+          </div>
+          <p>Player 1 won</p>
+        </div>
+      );
+    } else if (points2 > points1) {
+      return (
+        <div className={styles.wrapper}>
+          <div className={styles.takmicari}>
+            <div className={styles.takmicar}>
+              <img src={crveni}></img>
+              <p>{player1 + ":" + points1}</p>
+            </div>
+            <div className={styles.takmicar}>
+              <p>{player2 + ":" + points2}</p>
+              <img src={zeleni}></img>
+            </div>
+          </div>
+          <p>Player 2 won</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className={styles.wrapper}>
+          <div className={styles.takmicari}>
+            <div className={styles.takmicar}>
+              <img src={crveni}></img>
+              <p>{player1 + ":" + points1}</p>
+            </div>
+            <div className={styles.takmicar}>
+              <p>{player2 + ":" + points2}</p>
+              <img src={zeleni}></img>
+            </div>
+          </div>
+          <p>Its a tie</p>
+        </div>
+      );
+    }
+  }
   return (
     <div className={styles.wrapper}>
       <div className={styles.takmicari}>
