@@ -69,8 +69,7 @@ const QuestionFourAnswer = () => {
       if (i < 20 && stop != "true") {
         stop = await getData();
         if (stop == true) {
-          await loadQuestion();
-          window.location.reload();
+          window.location.href = "/#/Question";
         }
         console.log(stop);
         i++;
